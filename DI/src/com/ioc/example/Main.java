@@ -9,14 +9,29 @@ import org.springframework.core.io.FileSystemResource;
 
 public class Main {
 
-	
 	public static void main(String args[]) {
 		
-		//BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
-		
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		Circle circle = context.getBean("circle", Circle.class);
+		DrawShape shape1 = context.getBean("drawShape", DrawShape.class);
+		DrawShape shape2 = context.getBean("drawShape", DrawShape.class);
 		
-		circle.draw();
+		System.out.println(shape1);
+		System.out.println(shape2);
+	
+		/*Shape shape = new Triangle();
+		
+		Triangle triangle = new Triangle();
+		triangle.setName("Triangle");
+		
+		Circle circle = new Circle();
+		circle.setName("Circle");
+		
+		DrawShape drawShape = new DrawShape();
+		
+		drawShape.setShape(triangle);
+		Shape shape1 = drawShape.getShape();
+		
+		
+		shape1.draw();*/
 	}
 }
