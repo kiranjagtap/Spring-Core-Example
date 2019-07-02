@@ -9,11 +9,11 @@
 		<property name="name" value="triangle"></property>
 	</bean>
 
-<bean id="drawShape" class="com.ioc.example.DrawShape" scope="prototype"> 
-<!-- <property name="shape" ref="triangle"></property> -->
-<constructor-arg ref="triangle"></constructor-arg>
+	<bean id="drawShape" class="com.ioc.example.DrawShape"
+		scope="prototype">
+		<property name="shape" ref="triangle"></property>
+		<!-- <constructor-arg ref="triangle"></constructor-arg> -->
 
-
-</bean>
+	</bean>
 
 </beans>
