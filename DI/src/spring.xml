@@ -11,7 +11,9 @@
 
 	<bean id="drawShape" class="com.ioc.example.DrawShape"
 		scope="prototype">
-		<property name="shape" ref="triangle"></property>
+		 <property name="shape">
+			 <ref bean="triangle"></ref>
+                 </property>
 		<!-- <constructor-arg ref="triangle"></constructor-arg> -->
 
 	</bean>
